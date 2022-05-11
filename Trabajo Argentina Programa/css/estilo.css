@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../imagen/fondo.jpg) no-repeat;
+    background-size: cover;
+    height: auto;
+    color: rgb(8, 8, 8);
+    font-family: 'Roboto', sans-serif;
+}
+
+.clsavatar {
+    height: 300px;
+    width: 300px;
+    border-radius: 30%;
+    margin: auto;
+    display: block;
+}
+
+.clscontenedor  {
+    width: 100%;
+    max-width: 90vw;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto); 
+    grid-template-areas: "clslogin clslogin clslogin"
+                        "clsdemi clsexperiencia clsexperiencia"
+                        "clsdemi clsestudio clsidioma"
+                        "clsfinal clsfinal clsfinal";  
+}
+
+.clscontenedor > div,
+.clscontenedor .clslogin,
+.clscontenedor .clsdemi,
+.clscontenedor .clsexperiencia,
+.clscontenedor .clsfinal {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clscontenedor .clslogin {
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    background: #270927;
+    opacity: 0.5;
+    grid-area: clslogin;
+    width: 100%;
+}
+
+.clscontenedor .clslogin li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+.clscontenedor .clslogin li {
+    display: inline-block;
+    text-align:center;
+}
+
+.clscontenedor .clslogin li a:hover{
+    background: #ef8354;
+}
+
+.clscontenedor .clsdemi {
+    grid-area: clsdemi;
+    min-width: 700px;
+    border-radius: 5%;
+}
+
+.clscontenedor .clsexperiencia {
+   grid-area: clsexperiencia;
+   border-radius: 5%;
+   background-color: #7dd7ee;
+    opacity: 0.5;
+}
+
+.clscontenedor .clsestudio {
+    grid-area: clsestudio;
+    border-radius: 5%;
+    background-color: #7dd7ee;
+    opacity: 0.5;
+}
+
+.clscontenedor .clsidioma {
+    grid-area: clsidioma;
+    border-radius: 5%;
+    background-color: #7dd7ee;
+    opacity: 0.5;
+}
+
+.clscontenedor .clsfinal {
+    grid-area: clsfinal;
+    background-color: #270927;
+    opacity: 0.4;
+}
+
+@media screen and (max-width: 1100px) {
+    .clscontenedor {
+        grid-template-areas: "clslogin clslogin clslogin"
+                        "clsdemi clsdemi clsdemi"
+                        "clsexperiencia clsexperiencia clsexperiencia"
+                        "clsestudio clsestudio clsestudio"
+                        "clsidioma clsidioma clsidioma"
+                        "clsfinal clsfinal clsfinal";
+    }
+}
